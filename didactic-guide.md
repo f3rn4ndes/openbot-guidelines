@@ -115,9 +115,9 @@ Do grilling if needed. Do not write code.
 
 #### 2. Spec + Tickets
 ```
-@SpecWriter Turn the previous conversation into a spec and tickets.
+@SpecWriter Turn the previous conversation into a parent Spec issue and child Ticket issues.
 Publish to GitHub.
-Done = issues with observable acceptance criteria.
+Done = one Spec issue (label spec) and linked Ticket issues (label ticket) with observable acceptance criteria.
 ```
 
 #### 3. Architecture (if needed)
@@ -157,8 +157,8 @@ Then record it in `LESSONS.md`.
 
 ## 6. Recommended routines
 
-- **Project Control**: daily status in `#project-status`.
-- **Observability**: periodic check of CI and evidence.
+- **Project Control**: daily status in `#project-status` (shows approved specs and ticket progress).
+- **Observability**: periodic check of CI, evidence, and traceability.
 - **Docs**: post-merge update.
 - **All**: weekly reflection or after complex tickets.
 
@@ -189,6 +189,8 @@ Then record it in `LESSONS.md`.
 - `roles/` — detailed instructions for each agent
 - `workflow/` — usage guides and flows
 - `analysis/` — analyses of poteto and Matt Pocock
+- `guides/` — model selection and other practical guides
+- `examples/` — beginner and advanced examples
 - `LESSONS.md` — lessons learned template
 - `didactic-guide.md` — this file
 
