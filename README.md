@@ -23,24 +23,30 @@ This directory contains the complete definition of a persistent agent team for s
 - [workflow/guia-de-uso-detalhado.md](workflow/guia-de-uso-detalhado.md) — Detailed operational guide: who to talk to, when, and why.
 - [workflow/referencia-rapida-detalhada.md](workflow/referencia-rapida-detalhada.md) — Quick reference table.
 
+### Guides
+- [guides/model-selection.md](guides/model-selection.md) — How to choose model and reasoning effort per agent, and how to use backup models.
+
 ### Examples (for learning)
 - [examples/beginner-examples.md](examples/beginner-examples.md) — Step-by-step examples for learning the tool.
 - [examples/prompt-patterns.md](examples/prompt-patterns.md) — Ready-to-use prompt templates.
+- [examples/advanced-examples.md](examples/advanced-examples.md) — External APIs, sensors, and equipment control examples (with diagram descriptions).
 
 ## How to Use in OpenBot
 
 1. Create an agent for each role (or start with Spec Writer, Implementer, Reviewer, and Project Control).
 2. Paste the role instructions into the agent’s persona/instructions field.
 3. Install the recommended skills (via Marketplace or locally). poteto-mode / pstack and Matt Pocock skills are especially relevant.
-4. Configure routines as described.
-5. Create the recommended Channels and add the agents.
-6. Connect the GitHub plugin on the agents that need it.
-7. Start with an intent prompt in the `#spec-to-impl` channel following the examples.
+4. Configure model and reasoning effort per agent (see guides/model-selection.md). Use backup models for rate limits.
+5. Configure routines as described.
+6. Create the recommended Channels and add the agents.
+7. Connect the GitHub plugin on the agents that need it.
+8. Start with an intent prompt in the `#spec-to-impl` channel following the examples.
 
 **Read first:**
 - [guia-didatico.md](guia-didatico.md) — Complete didactic guide from installation to team usage.
 - [examples/beginner-examples.md](examples/beginner-examples.md) — Step-by-step examples for learning the tool.
-- [examples/prompt-patterns.md](examples/prompt-patterns.md) — Ready-to-use prompt templates.
+- [examples/advanced-examples.md](examples/advanced-examples.md) — External world examples.
+- [guides/model-selection.md](guides/model-selection.md) — Model and reasoning effort choices.
 - [workflow/guia-de-uso-detalhado.md](workflow/guia-de-uso-detalhado.md) — Detailed operational guide.
 - [LESSONS.md](LESSONS.md) — Lessons learned template.
 
