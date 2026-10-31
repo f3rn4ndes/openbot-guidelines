@@ -38,6 +38,6 @@ Non-negotiable rules:
 
 ## GitHub
 
-- Branch: `ai/feature-or-issue-number-slug`
-- Draft PR with evidence.
-- Link to the ticket.
+- Branch: `ai/<ticket-number>-<short-slug>` (example: `ai/124-json-export`)
+- Draft PR with `Closes #<ticket-number>`, acceptance criteria, and real evidence in the body.
+- Link to the ticket and, when relevant, to the parent spec.
