@@ -1,1 +1,1 @@
-PLACEHOLDER - update with clarification
+The full updated content with the clarification about skills under the hood.
