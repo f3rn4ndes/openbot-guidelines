@@ -59,6 +59,33 @@ Both approaches attack the same central problem of AI-assisted development: **in
 - Less emphasis on "prove on the real artifact" than poteto (depends more on tests + review).
 - Per-repository setup (`/setup-matt-pocock-skills`) is necessary and easy to forget.
 
+## Comparison: Modeling phase (new or existing projects)
+
+| Aspect | Matt Pocock | poteto (pstack) |
+|--------|-------------|-----------------|
+| **Main style** | Structured interview (grilling) | Investigation + structured design |
+| **Key skill / playbook** | `/grill-me`, `/grill-with-docs`, `domain-modeling` | Investigation playbook, `/architect`, `/how`, `/why` |
+| **Best used when** | Intent is fuzzy, requirements are unclear, domain terms are not settled | Existing code you do not fully understand, larger design decisions |
+| **What it forces** | Decisions and shared vocabulary | Accurate mental model of the current system + design options |
+| **Main output** | GLOSSARY.md + ADRs + decisions in the conversation | Understanding of current code + design with trade-offs |
+| **Approach** | Closed questions, one at a time, until no ambiguity remains | First reads the code (read-only), then proposes structure |
+| **Risk if misused** | Can become long if there is no stopping criterion | Can skip the conversation and propose a design without aligning intent |
+
+### How they complement each other
+
+- **Matt first**: when the intention is not yet clear.  
+  Use grilling to extract observable requirements and the domain vocabulary.
+
+- **poteto after**: when code already exists or when the design decision is large.  
+  Use investigation to understand what is already there, then `/architect` to structure the change.
+
+### Practical sequence
+
+1. Spec Writer (Matt style): “Do grilling. Help define what the app must do and start the GLOSSARY.”
+2. Architect or Spec Writer (poteto style): “Investigate the relevant code. Then propose seams and an ADR if the decision is hard to reverse.”
+
+---
+
 ## Recommended Synthesis for OpenBot
 
 **Combining both is the most robust path:**
