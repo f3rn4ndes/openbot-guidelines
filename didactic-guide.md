@@ -66,14 +66,21 @@ You do **not** need to create a new set of agents for every project.
 
 ---
 
-## 4. Creating the development team
+## 4. Creating the development team (detailed procedures)
 
 You will create 7 agents. Start with the essentials and add the others later.
 
-### Step 1 — Create the agents
+### Step 1 — Create an agent (repeat for each role)
 
-In OpenBot, create one agent for each role below.  
-Paste the instructions from the corresponding file (in the `roles/` folder) into the agent’s persona/instructions field.
+1. Open OpenBot.
+2. In the left sidebar, look for the agents list or click **+** / **New Agent**.
+3. Give the agent a name (example: `Spec Writer`).
+4. In the agent settings, find the **Instructions** / **Persona** / **System prompt** field.
+5. Open the corresponding file from this repository (see table below) and **copy the entire content** of the “Agent Instructions” section.
+6. Paste it into the agent’s instructions field.
+7. Save the agent.
+
+Repeat for each agent:
 
 | Agent              | Instructions file              | Priority |
 |--------------------|--------------------------------|----------|
@@ -85,29 +92,56 @@ Paste the instructions from the corresponding file (in the `roles/` folder) into
 | Project Control    | roles/project-control.md       | High     |
 | Observability      | roles/observability.md         | Medium   |
 
-### Step 2 — Install recommended skills
+**Tip**: After pasting, open a private chat with the agent and ask “What is your role?” to confirm the instructions were loaded.
 
-From the OpenBot Marketplace or manually, install (when available):
+### Step 2 — Configure model and reasoning effort (recommended)
 
-- pstack / poteto-mode (poteto)
-- Matt Pocock skills (grill-me, to-spec, to-tickets, tdd, code-review, retro, etc.)
+For each agent:
+1. Open the agent’s settings.
+2. Choose a model (see `guides/model-selection.md`).
+3. Set reasoning effort (low / medium / high) according to the role.
+4. If available, add a backup model for rate limits.
+
+### Step 3 — Install recommended skills (optional on day one)
+
+1. Open the OpenBot Marketplace (usually in the sidebar or settings).
+2. Search for and install (when available):
+   - pstack / poteto-mode
+   - Matt Pocock skills (grill-me, to-spec, to-tickets, tdd, code-review, retro)
+3. After installing, go back to the agent settings and attach the relevant skills to each agent.
 
 Not all are required on day one. The agents already have instructions that cover the process.
 
-### Step 3 — Create Channels
+### Step 4 — Create a Channel and add agents
 
-Create the following channels and add the relevant agents:
+1. In the sidebar, find **Channels** (or **Team Chat**).
+2. Click **+** / **New Channel**.
+3. Name it (example: `#spec-to-impl`).
+4. Add the relevant agents to the channel (usually a button “Add members” or by mentioning them).
+5. Repeat for the other channels:
 
 - `#spec-to-impl` → Spec Writer, Architect, Implementer, Project Control
 - `#impl-review` → Implementer, Reviewer, Observability
 - `#project-status` → Project Control + general reading
 - `#docs` → Docs + Spec Writer / Architect
 - `#observability` → Observability + Reviewer
-- `#lessons` → All (optional, for reflections)
+- `#lessons` → All (optional)
 
-### Step 4 — Connect GitHub
+**Tip**: After creating a channel, post a simple message like “Hello team” and mention one agent (`@SpecWriter`) to confirm they can see it.
 
-Install the GitHub plugin/MCP on the agents that need it (Spec Writer, Implementer, Reviewer, Project Control).
+### Step 5 — Connect GitHub
+
+1. Open the agent settings for Spec Writer (and later for Implementer, Reviewer, Project Control).
+2. Look for **Plugins**, **MCP**, or **Integrations**.
+3. Connect the GitHub plugin and authorize it.
+4. Confirm the agent can list issues or repositories.
+
+### Step 6 — Configure routines (optional but useful)
+
+1. Open the agent settings for Project Control.
+2. Find **Routines** or **Scheduled tasks**.
+3. Create a daily routine that posts a status summary in `#project-status`.
+4. Do the same for Observability (evidence check).
 
 ---
 
@@ -116,7 +150,7 @@ Install the GitHub plugin/MCP on the agents that need it (Spec Writer, Implement
 ### Practical example: add JSON export
 
 #### 1. Alignment
-In the `#spec-to-impl` channel:
+Open the `#spec-to-impl` channel and post:
 
 ```
 @SpecWriter I want to add JSON export to the report command.
@@ -131,12 +165,18 @@ Observable success criteria:
 Do grilling if needed. Do not write code.
 ```
 
+Wait for Spec Writer to reply (and ask clarifying questions if needed).
+
 #### 2. Spec + Tickets
+Still in the same channel:
+
 ```
 @SpecWriter Turn the previous conversation into a parent Spec issue and child Ticket issues.
 Publish to GitHub.
 Done = one Spec issue (label spec) and linked Ticket issues (label ticket) with observable acceptance criteria.
 ```
+
+Spec Writer should post a handoff with issue numbers.
 
 #### 3. Architecture (if needed)
 ```
@@ -144,6 +184,8 @@ Done = one Spec issue (label spec) and linked Ticket issues (label ticket) with 
 ```
 
 #### 4. Implementation
+You can stay in the channel or open a private chat with Implementer:
+
 ```
 @Implementer Implement ticket #124.
 Spec: #123
@@ -152,6 +194,8 @@ Open a draft PR with Closes #124 and the evidence in the body.
 ```
 
 #### 5. Review
+In the channel or in `#impl-review`:
+
 ```
 @Reviewer Review PR #456.
 Check Standards + fidelity to the spec + real evidence.
@@ -187,7 +231,8 @@ Then record it in `LESSONS.md`.
 - Talk to the **agent that owns the phase**.
 - Declare the **desired result** (observable).
 - Avoid loose prompts.
-- Prefer channels over private messages.
+- Prefer channels over private messages for coordination.
+- Use private chats for long implementation work.
 - Ask for reflection when there is a correction.
 
 ---
@@ -195,8 +240,8 @@ Then record it in `LESSONS.md`.
 ## 8. Next steps
 
 1. Create the essential agents (Spec Writer, Implementer, Reviewer, Project Control).
-2. Create the main channels.
-3. Run a small ticket end-to-end.
+2. Create the main channels and add the agents.
+3. Run a small ticket end-to-end following the example above.
 4. Adjust memories and routines based on the result.
 5. Keep `LESSONS.md` updated.
 
