@@ -23,6 +23,10 @@ This directory contains the complete definition of a persistent agent team for s
 - [workflow/guia-de-uso-detalhado.md](workflow/guia-de-uso-detalhado.md) — Detailed operational guide: who to talk to, when, and why.
 - [workflow/referencia-rapida-detalhada.md](workflow/referencia-rapida-detalhada.md) — Quick reference table.
 
+### Examples (for learning)
+- [examples/beginner-examples.md](examples/beginner-examples.md) — Step-by-step examples for learning the tool.
+- [examples/prompt-patterns.md](examples/prompt-patterns.md) — Ready-to-use prompt templates.
+
 ## How to Use in OpenBot
 
 1. Create an agent for each role (or start with Spec Writer, Implementer, Reviewer, and Project Control).
@@ -31,10 +35,12 @@ This directory contains the complete definition of a persistent agent team for s
 4. Configure routines as described.
 5. Create the recommended Channels and add the agents.
 6. Connect the GitHub plugin on the agents that need it.
-7. Start with an intent prompt in the `#spec-to-impl` channel following the examples in prompt-flows.md.
+7. Start with an intent prompt in the `#spec-to-impl` channel following the examples.
 
 **Read first:**
 - [guia-didatico.md](guia-didatico.md) — Complete didactic guide from installation to team usage.
+- [examples/beginner-examples.md](examples/beginner-examples.md) — Step-by-step examples for learning the tool.
+- [examples/prompt-patterns.md](examples/prompt-patterns.md) — Ready-to-use prompt templates.
 - [workflow/guia-de-uso-detalhado.md](workflow/guia-de-uso-detalhado.md) — Detailed operational guide.
 - [LESSONS.md](LESSONS.md) — Lessons learned template.
 
