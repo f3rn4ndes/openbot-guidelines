@@ -86,6 +86,50 @@ Do grilling if the thresholds or APIs are unclear.
 
 ---
 
+## Diagrams
+
+These diagrams help visualize the ideas. The image files themselves are not stored in the repository (binary upload limitation). Use the descriptions and prompts below to regenerate them when needed.
+
+### Full cycle (simple view)
+
+**What it shows**:  
+A horizontal flow of colored boxes: Alignment → Spec Writer → Architect → Implementer → Reviewer → Docs.  
+Project Control sits below with a continuous feedback loop.
+
+**Prompt to regenerate**:
+```
+A clean, colorful flowchart of an AI agent team software development cycle. Boxes in different colors: Spec Writer (blue), Architect (purple), Implementer (green), Reviewer (orange), Docs (teal), Project Control (gray). Arrows showing the flow from Alignment to Spec to Implementation to Review to Documentation. Modern, flat design, white background, clear labels.
+```
+
+### External API interaction
+
+**What it shows**:  
+On the left: Spec Writer, Implementer and Reviewer.  
+In the middle: a laptop running a script.  
+On the right: external services (Weather API, Local Light, Temperature Sensor) with HTTP GET/POST arrows and a “real evidence” return path.
+
+**Prompt to regenerate**:
+```
+A colorful diagram showing an AI coding agent team interacting with the outside world. On the left: OpenBot agents (Spec Writer, Implementer, Reviewer). In the middle: a laptop running a script. On the right: external services — a weather API cloud, a local light bulb icon with HTTP arrows, and a temperature sensor. Arrows labeled 'HTTP GET', 'HTTP POST', 'real evidence'. Modern flat style, bright colors, white background.
+```
+
+### Model and reasoning effort
+
+**What it shows**:  
+Four boxes: Spec Writer (high effort, strong model), Implementer (medium-high), Project Control (low effort, fast model), Observability (low effort). A note about backup models at the bottom.
+
+**Prompt to regenerate**:
+```
+A simple colorful diagram titled 'Model and Reasoning Effort per Agent'. Four boxes: Spec Writer (high effort, strong model), Implementer (medium-high), Project Control (low effort, fast model), Observability (low effort). A small note about backup models. Clean flat design, blue and green tones, white background.
+```
+
+---
+
+**Didactic note**:  
+When teaching or presenting this material, generate the diagrams with the prompts above and place them next to the corresponding examples. The visual makes the separation of roles and the idea of real evidence much clearer than text alone.
+
+---
+
 ## Tips for these advanced examples
 
 1. Always require **real evidence** of the external call (command output + response or log).
