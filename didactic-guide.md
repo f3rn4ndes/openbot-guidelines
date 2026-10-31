@@ -1,1 +1,1 @@
-See local file - will be pushed via alternative method if needed
+The full content is in the local file. Please use the local version.
