@@ -26,6 +26,7 @@ This directory contains the complete definition of a persistent agent team for s
 
 ### Guides
 - [guides/model-selection.md](guides/model-selection.md) — How to choose model and reasoning effort per agent, and how to use backup models.
+- [checklist.md](checklist.md) — Setup and usage checklist.
 
 ### Examples (for learning)
 - [examples/beginner-examples.md](examples/beginner-examples.md) — Step-by-step examples for learning the tool.
@@ -45,6 +46,7 @@ This directory contains the complete definition of a persistent agent team for s
 
 **Read first:**
 - [didactic-guide.md](didactic-guide.md) — Complete didactic guide from installation to team usage.
+- [checklist.md](checklist.md) — Setup and usage checklist.
 - [examples/beginner-examples.md](examples/beginner-examples.md) — Step-by-step examples for learning the tool.
 - [examples/advanced-examples.md](examples/advanced-examples.md) — External world examples.
 - [guides/model-selection.md](guides/model-selection.md) — Model and reasoning effort choices.
